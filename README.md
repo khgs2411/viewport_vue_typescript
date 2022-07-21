@@ -3,10 +3,14 @@
 
 ## Installation instructions
 
-> cd into the project directory
-> npm Install
-> npm run dev
-> open the browser at http://localhost:8000
+### cd into the project directory
+
+### npm Install
+
+### npm run dev
+
+### open the browser at http://localhost:8000
+
 
 ## This project was inspired by this Stackoverflow post 
 https://stackoverflow.com/questions/16919601/html5-canvas-camera-viewport-how-to-actually-do-it
