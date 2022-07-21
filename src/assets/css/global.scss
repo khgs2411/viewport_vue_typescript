@@ -1,0 +1,13 @@
+:root {
+    --background: linear-gradient(180deg, #64BEFF -50%, #6e96ff 69.71%, #2a65ff 150%);
+    --color: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: var(--color);
+}
