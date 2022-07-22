@@ -20,7 +20,7 @@ This project was inspired by this Stackoverflow post
 and based on this fiddle
 [jsfiddle]:(http://jsfiddle.net/gfcarv/tAwQV/)
 
-it has been extracted - and made into a full blown typescript class 
+it has been extracted - and made into a full blown typescript classes examples
 
 
 
