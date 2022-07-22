@@ -1,6 +1,6 @@
 class Player {
-  x: number;
-  y: number;
+  xPosition: number;
+  yPosition: number;
   width: number;
   height: number;
   speed: number;
@@ -13,8 +13,8 @@ class Player {
   constructor(x: number, y: number) {
     //* (x, y) = center of object
     //! NOTE: it represents the player position on the world(room), not the canvas position
-    this.x = x;
-    this.y = y;
+    this.xPosition = x;
+    this.yPosition = y;
 
     // move speed
     this.speed = 400;
@@ -94,23 +94,23 @@ class Player {
     // parameter step is the time between frames ( in seconds )
 
     // check controls and move the player accordingly
-    if (this.left) this.x -= this.speed * step;
-    if (this.up) this.y -= this.speed * step;
-    if (this.right) this.x += this.speed * step;
-    if (this.down) this.y += this.speed * step;
+    if (this.left) this.xPosition -= this.speed * step;
+    if (this.up) this.yPosition -= this.speed * step;
+    if (this.right) this.xPosition += this.speed * step;
+    if (this.down) this.yPosition += this.speed * step;
 
     // don't let player leaves the world's boundary
-    if (this.x - this.width / 2 < 0) {
-      this.x = this.width / 2;
+    if (this.xPosition - this.width / 2 < 0) {
+      this.xPosition = this.width / 2;
     }
-    if (this.y - this.height / 2 < 0) {
-      this.y = this.height / 2;
+    if (this.yPosition - this.height / 2 < 0) {
+      this.yPosition = this.height / 2;
     }
-    if (this.x + this.width / 2 > worldWidth) {
-      this.x = worldWidth - this.width / 2;
+    if (this.xPosition + this.width / 2 > worldWidth) {
+      this.xPosition = worldWidth - this.width / 2;
     }
-    if (this.y + this.height / 2 > worldHeight) {
-      this.y = worldHeight - this.height / 2;
+    if (this.yPosition + this.height / 2 > worldHeight) {
+      this.yPosition = worldHeight - this.height / 2;
     }
   }
 
@@ -120,8 +120,8 @@ class Player {
     ctx.fillStyle = "coral";
     // before draw we need to convert player world's position to canvas position
     ctx.fillRect(
-      this.x - this.width / 2 - xView,
-      this.y - this.height / 2 - yView,
+      this.xPosition - this.width / 2 - xView,
+      this.yPosition - this.height / 2 - yView,
       this.width,
       this.height
     );
